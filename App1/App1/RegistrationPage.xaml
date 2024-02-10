@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.RegistrationPage" BackgroundColor="#feaea5">
+
+    <AbsoluteLayout >
+
+        <BoxView Color="White" AbsoluteLayout.LayoutBounds="0, 0, .3, 0.07" AbsoluteLayout.LayoutFlags="All"/>
+        <BoxView Color="#a376af" AbsoluteLayout.LayoutBounds="0, 0, 1, .13" AbsoluteLayout.LayoutFlags="All" CornerRadius="120" />
+        <BoxView Color="White" AbsoluteLayout.LayoutBounds="0, 2, 2, .8" AbsoluteLayout.LayoutFlags="All" CornerRadius="100"/>
+
+        <Label x:Name="DPKoorFood" Text="Добро пожаловать в KorFood" AbsoluteLayout.LayoutBounds=".5, .05" AbsoluteLayout.LayoutFlags="PositionProportional" FontSize =" 32" FontAttributes="Bold" TextColor="White"/>
+
+        <Button x:Name="ToNextRegPage" Text="Далее" TextColor="White" Clicked="ToNextRegPage2"  BackgroundColor = "#211b5e" AbsoluteLayout.LayoutBounds=".85, .85, 0.4, .06" AbsoluteLayout.LayoutFlags="All" CornerRadius="100"/>
+        <Label x:Name="ErrorLabel" Text="" FontSize =" 15"  TextColor="Red" AbsoluteLayout.LayoutBounds=".22, .75" AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <!--<Label x:Name="label1" Text="далее" FontSize =" 20" TextColor="White" AbsoluteLayout.LayoutBounds=".79, .885" AbsoluteLayout.LayoutFlags="PositionProportional" >
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ToNextRegPage" />
+            </Label.GestureRecognizers>
+        </Label>-->
+
+        <Entry x:Name ="log" TextChanged="TextChanged" FontSize="16" TextColor="Black" Placeholder="придумайте логин" PlaceholderColor="Gray" WidthRequest="300" AbsoluteLayout.LayoutBounds=".5, .5" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <Entry x:Name ="pass" TextChanged="TextChanged" FontSize="16" TextColor="Black" Placeholder="придумайте пароль" PlaceholderColor="Gray" WidthRequest="300" AbsoluteLayout.LayoutBounds=".5, .6" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <Entry x:Name ="NameField" TextChanged="TextChanged" FontSize="16" TextColor="Black" Placeholder="введите свое имя" PlaceholderColor="Gray" WidthRequest="300" AbsoluteLayout.LayoutBounds=".5, .7" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+
+    </AbsoluteLayout >
+
+</ContentPage>

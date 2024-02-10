@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.PageOfAdding">
+    <StackLayout Orientation="Horizontal">
+        <SwipeView >
+            <SwipeView.LeftItems >
+                <SwipeItemView WidthRequest="180">
+                    <AbsoluteLayout BackgroundColor="White" >
+                        <Frame BackgroundColor ="#a6a0d9" AbsoluteLayout.LayoutBounds="0, 0, 1, .26" AbsoluteLayout.LayoutFlags="All" Padding="0">
+                            <AbsoluteLayout>
+                                <Frame BackgroundColor="Gray" CornerRadius="60"  Padding="0" Margin="0" AbsoluteLayout.LayoutBounds="10, 15, 100, 100">
+
+                                </Frame>
+                                <Label x:Name="NameUser" Text="" TextColor="Black" FontAttributes="Bold" FontSize="16" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="10, 130, .9, .5" AbsoluteLayout.LayoutFlags="SizeProportional"/>
+                            </AbsoluteLayout>
+                        </Frame>
+                        <Button Text="    Поиск кафе/бара      " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start"  AbsoluteLayout.LayoutBounds="0, .3, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Лента мероприятий    " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, .4, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Посуточное питание   " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, .5, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Готовим с KorFood    " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, .6, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Настройки" BorderWidth="10" Clicked="ToSettingsPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds=".2, .7, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+
+
+                    </AbsoluteLayout>
+                </SwipeItemView>
+            </SwipeView.LeftItems>
+            <AbsoluteLayout BackgroundColor="#353442">
+                <Entry x:Name="titleField" Placeholder="введите название"  AbsoluteLayout.LayoutBounds=".3, .3, .8, .1" AbsoluteLayout.LayoutFlags="All"/>
+                <Editor x:Name="descField" Placeholder="введите описание" AutoSize="TextChanges"  AbsoluteLayout.LayoutBounds=".3, .6, .8, .3" AbsoluteLayout.LayoutFlags="All"/>
+                <Entry x:Name="imageField" Placeholder="вставьте ссылку на фотографию"  AbsoluteLayout.LayoutBounds="0.3, .85, .8, .1" AbsoluteLayout.LayoutFlags="All"/>
+                <Button x:Name="ButtonOfAdding" Text="добавить объект" Clicked ="AddItemButton"  AbsoluteLayout.LayoutBounds=".5, .96, .7, .07" AbsoluteLayout.LayoutFlags="All"/>
+
+                <Entry x:Name="NameField" Placeholder="введите имя нового админа"  AbsoluteLayout.LayoutBounds=".3, .45, .8, .1" AbsoluteLayout.LayoutFlags="All"/>
+                <Entry x:Name="LoginField" Placeholder="введите логин для нового админа"  AbsoluteLayout.LayoutBounds=".3, .55, .8, .1" AbsoluteLayout.LayoutFlags="All"/>
+                <Entry x:Name="PassField" Placeholder="введите пароль для нового админа"  AbsoluteLayout.LayoutBounds=".3, .65, .8, .1" AbsoluteLayout.LayoutFlags="All"/>
+                <Entry x:Name="WorkPlaceField" Placeholder="введите место работы " AbsoluteLayout.LayoutBounds=".3, .75, .8, .1" AbsoluteLayout.LayoutFlags="All"/>
+                <Entry x:Name="imageField2" Placeholder="вставьте ссылку на фотографию работника"  AbsoluteLayout.LayoutBounds="0.3, .85, .8, .1" AbsoluteLayout.LayoutFlags="All"/>
+                <Button x:Name="ButtonAdAdmin" Text="добавить нового админа" Clicked ="AddAdminButton"  AbsoluteLayout.LayoutBounds=".5, .95, .7, .07" AbsoluteLayout.LayoutFlags="All"/>
+            </AbsoluteLayout>
+        </SwipeView>
+    </StackLayout>
+</ContentPage>

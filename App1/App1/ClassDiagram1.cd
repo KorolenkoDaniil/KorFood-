@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="App1.Ad">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAAAAAAAEAAIAAAAAAAEAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Ad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.AdminPage">
+    <Position X="4.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIACAAAgAAAAAAAIEAQBEAAAAAABgAAAAAAAAAAA=</HashCode>
+      <FileName>AdminPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.AdRep">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAACAAGACAQAAAAAAAAAAAgCAQAAABAACAAA=</HashCode>
+      <FileName>AdRep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.CafeOrders">
+    <Position X="13.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>CafeOrders.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.CustomPage">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAABAIAAAAAAQAAAAAABAAAAAAAAgAAAAAAAAAAAQA=</HashCode>
+      <FileName>CustomPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.MainPage">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgBIAAwAAQEAAAAIAAAAAAAAgAQAAAAAACAAAEAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.OrderPage">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAABAFAACAAABAAKAAAAACCQA=</HashCode>
+      <FileName>OrderPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.Pageitem">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAIAACAAAAQAEAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Pageitem.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.PageOfAdding">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAIAAAAEAAAAAgAQAEAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>PageOfAdding.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.PageOfContent">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAKAAwgAAAAAAIIEAAAEAAAAAABEAAAACAAAAAQ=</HashCode>
+      <FileName>PageOfContent.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.PageSearch">
+    <Position X="1" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageSearch.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.PageSettings">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>0AIAIIAAgAAAAAAAAAAAAEAEAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>PageSettings.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.RegistrationPage">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAQAAAAAAAAAAAAAAAAAACAAAADAAAAAA=</HashCode>
+      <FileName>RegistrationPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.RegistrationPage2">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAEAAAAAAAAAAAAAAAAACAAAAACCAABAAA=</HashCode>
+      <FileName>RegistrationPage2.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.Reservation">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAQAAEAAAAAAAAAAAEAAACAAAQAAAAQgA=</HashCode>
+      <FileName>Reservation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.ReservationRep">
+    <Position X="1" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAEACEQAAAAAAAAAAAAAAQAAABAACAAA=</HashCode>
+      <FileName>ReservationRep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.User">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAABAAAAEAIAAAAAAQACAABAAAAAgABEAI=</HashCode>
+      <FileName>UserClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App1.UserRep">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAJAAAAAAAAAACBCAAAAAAAAAAAAAAAAAQAABAAAAAA=</HashCode>
+      <FileName>UserRep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

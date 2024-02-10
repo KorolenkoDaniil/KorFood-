@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.CustomPage">
+    <ContentPage.Content>
+        <AbsoluteLayout x:Name="g">
+            <Label x:Name="L1" Text="1" AbsoluteLayout.LayoutBounds=".75, .21" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <Label x:Name="L2" Text="2" AbsoluteLayout.LayoutBounds=".75, .31" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <Label x:Name="L3" Text="3" AbsoluteLayout.LayoutBounds=".75, .41" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <Slider x:Name="slider1"  Maximum="255"  Value="17" ValueChanged="V1"  MinimumTrackColor="Red" MaximumTrackColor="Gray" ThumbColor="Red" AbsoluteLayout.LayoutBounds=".2, .2, .625, .1" AbsoluteLayout.LayoutFlags="All"/>
+            <Slider x:Name="slider2"  Maximum="255"  Value="17" ValueChanged="V2"  MinimumTrackColor="Green" MaximumTrackColor="Gray" ThumbColor="Green" AbsoluteLayout.LayoutBounds=".2, .3, .625, .1" AbsoluteLayout.LayoutFlags="All"/>
+            <Slider x:Name="slider3"  Maximum="255"  Value="17" ValueChanged="V3"  MinimumTrackColor="Blue" MaximumTrackColor="Gray" ThumbColor="Blue" AbsoluteLayout.LayoutBounds=".2, .4, .625, .1" AbsoluteLayout.LayoutFlags="All"/>
+            <Button Clicked="SaveColor" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

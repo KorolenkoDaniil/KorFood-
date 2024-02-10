@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.AdminPage">
+    <StackLayout Orientation="Horizontal">
+        <SwipeView >
+            <SwipeView.LeftItems >
+                <SwipeItemView WidthRequest="180">
+                    <AbsoluteLayout BackgroundColor="White" >
+                        <Frame BackgroundColor ="#a6a0d9" AbsoluteLayout.LayoutBounds="0, 0, 1, .26" AbsoluteLayout.LayoutFlags="All" Padding="0">
+                            <AbsoluteLayout>
+                                <Frame BackgroundColor="Gray" CornerRadius="60"  Padding="0" Margin="0" AbsoluteLayout.LayoutBounds="10, 15, 100, 100">
+
+                                </Frame>
+                                <Label x:Name="NameUser" Text="" TextColor="Black" FontAttributes="Bold" FontSize="16" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="10, 130, .9, .5" AbsoluteLayout.LayoutFlags="SizeProportional"/>
+                            </AbsoluteLayout>
+                        </Frame>
+                        <Button Text="    Поиск кафе/бара      " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start"  AbsoluteLayout.LayoutBounds="0, .3, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Лента мероприятий    " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, .4, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Посуточное питание   " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, .5, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Готовим с KorFood    " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, .6, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Настройки" BorderWidth="10" Clicked="ToSettingsPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds=".2, .7, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Добавить админа      " BorderWidth="10" x:Name="NewAdmin" Clicked="AddAdmin" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, .78, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+
+                    </AbsoluteLayout>
+                </SwipeItemView>
+            </SwipeView.LeftItems>
+            <Grid HeightRequest="1000" WidthRequest="353" BackgroundColor="#a6a0d9">
+                <StackLayout>
+                    <AbsoluteLayout >
+                        <Frame Padding="5, -5, 0, 0" BackgroundColor="#c9c3c3" CornerRadius="60" AbsoluteLayout.LayoutBounds=".9, .02, .8, .06" AbsoluteLayout.LayoutFlags="All">
+                            <Entry x:Name="PoiskEntry" HeightRequest="30" FontSize="18" TextColor="Black" PlaceholderColor="Black" TextChanged="PoiskEntry_TextChanged" Placeholder="  Поиск" AbsoluteLayout.LayoutBounds=".2, 0" AbsoluteLayout.LayoutFlags="All" />
+                        </Frame>
+                        <CollectionView x:Name="itemCollection" SelectionMode="Single" SelectionChanged="OnItemSelected" AbsoluteLayout.LayoutBounds="0, .9, 1, .9" AbsoluteLayout.LayoutFlags="All">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout x:Name="fg" Padding="0, 0, 50, 50">
+                                        <AbsoluteLayout BackgroundColor="#a6a0d9">
+                                            <BoxView Color="#feaea5" AbsoluteLayout.LayoutBounds="0, 0, .3, 1" AbsoluteLayout.LayoutFlags="All" />
+                                            <Frame BackgroundColor="#feaea5" HeightRequest="{Binding size}" AbsoluteLayout.LayoutBounds="-0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" CornerRadius="50" >
+                                                <StackLayout>
+                                                    <Frame x:Name="BOX1" Grid.Column="0" Grid.Row="0" HeightRequest="200" CornerRadius="20" BackgroundColor="Red"  Padding="0" AbsoluteLayout.LayoutBounds=".3, .1, .5, 1" AbsoluteLayout.LayoutFlags="All">
+                                                        <Image Source="{Binding image}" Aspect="Fill" />
+                                                    </Frame>
+                                                    <Label Text="{Binding Title}" Grid.Column="1" Padding="0" Margin="0" Grid.Row="0" FontSize="16" TextColor="Black" FontAttributes="Bold" AbsoluteLayout.LayoutBounds=".95, .3, .45, .75" AbsoluteLayout.LayoutFlags="All" />
+                                                    <Label Text="{Binding description}" Grid.Column="0" Padding="0" Margin="0" Grid.Row="1" FontSize="12" TextColor="Black" FontAttributes="Italic" AbsoluteLayout.LayoutBounds=".96, 1.7, .45, .75" AbsoluteLayout.LayoutFlags="All" />
+                                                </StackLayout>
+                                            </Frame>
+                                        </AbsoluteLayout>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <Button  TextColor="White" Clicked="ToPageofAdding" BackgroundColor = "#211b5e" AbsoluteLayout.LayoutBounds=".87, .95, 60, 60" AbsoluteLayout.LayoutFlags="PositionProportional" CornerRadius="100"/>
+                        <Button  TextColor="White" Clicked="ToPageofAdding" BackgroundColor = "#211b5e" AbsoluteLayout.LayoutBounds=".87, .95, 60, 60" AbsoluteLayout.LayoutFlags="PositionProportional" CornerRadius="100"/>
+
+                        <Label x:Name="label1" Text="+" FontSize ="40" TextColor="White" AbsoluteLayout.LayoutBounds=".83, .94" AbsoluteLayout.LayoutFlags="PositionProportional" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ToPageofAdding" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </AbsoluteLayout>
+                    <Button Text="просмотреть заказы " Clicked="ToOrdersPage"/>
+                </StackLayout>
+            </Grid>
+        </SwipeView>
+    </StackLayout>
+</ContentPage>

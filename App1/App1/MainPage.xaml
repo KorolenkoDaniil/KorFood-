@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage" BackgroundColor="#feaea5">
+
+    <AbsoluteLayout>
+
+        <BoxView Color="White" AbsoluteLayout.LayoutBounds="0, 0, 0.2, .06" AbsoluteLayout.LayoutFlags="All"/>
+        <BoxView Color="#a6a0d9" AbsoluteLayout.LayoutBounds="0, 0, 1, .13" AbsoluteLayout.LayoutFlags="All" CornerRadius="120" />
+        <BoxView Color="White" AbsoluteLayout.LayoutBounds="0, 2 , 2, .8" AbsoluteLayout.LayoutFlags="All" CornerRadius="100"/>
+ 
+        <Label x:Name="LabelKorFood" Text="Добро пожаловать в KorFood" AbsoluteLayout.LayoutBounds=".5, .05" AbsoluteLayout.LayoutFlags="PositionProportional" FontSize =" 32" FontAttributes="Bold" TextColor="White"/>
+        
+        
+        
+        <Entry x:Name ="log" TextChanged="TextChanged" TextColor="Black" Placeholder="введите логин" PlaceholderColor="Gray" WidthRequest="300" AbsoluteLayout.LayoutBounds=".5, .5" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <Entry x:Name ="pass" TextChanged="TextChanged" TextColor="Black" Placeholder="введите пароль" PlaceholderColor="Gray" WidthRequest="300" AbsoluteLayout.LayoutBounds=".5, .6" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+        
+        
+        <Label x:Name="RegLabel" Text="регистрация" TextColor="Gray" AbsoluteLayout.LayoutBounds=".2, .93" AbsoluteLayout.LayoutFlags="PositionProportional" >
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ToRegistrationPage" />
+            </Label.GestureRecognizers>
+        </Label>
+
+        <Label x:Name="LabelForget" Text="забыли пароль"  TextColor="Gray" AbsoluteLayout.LayoutBounds=".8, .93" AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Button x:Name="ButtonToContent" Text="Войти" TextColor="White" Clicked="ToPageOfContent"  BackgroundColor = "#211b5e" AbsoluteLayout.LayoutBounds=".85, .85, 0.4, .06" AbsoluteLayout.LayoutFlags="All" CornerRadius="100"/>
+        <Label x:Name="ErrorLabel" Text=""  TextColor="Red" AbsoluteLayout.LayoutBounds=".3, .65" AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+
+    </AbsoluteLayout>
+
+
+</ContentPage>
+<!--&#10;-->

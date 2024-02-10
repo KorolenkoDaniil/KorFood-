@@ -1,0 +1,62 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.OrderPage">
+    <StackLayout Orientation="Horizontal">
+        <SwipeView >
+            <SwipeView.LeftItems >
+                <SwipeItemView WidthRequest="180">
+                    <AbsoluteLayout BackgroundColor="White" >
+                        <Frame BackgroundColor ="#a6a0d9" AbsoluteLayout.LayoutBounds="0, 0, 1, .26" AbsoluteLayout.LayoutFlags="All" Padding="0">
+                            <AbsoluteLayout>
+                                <Frame BackgroundColor="Gray" CornerRadius="60"  Padding="0" Margin="0" AbsoluteLayout.LayoutBounds="10, 15, 100, 100">
+
+                                </Frame>
+                                <Label x:Name="NameUser" Text="" TextColor="Black" FontAttributes="Bold" FontSize="16" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="10, 130, .9, .5" AbsoluteLayout.LayoutFlags="SizeProportional"/>
+                            </AbsoluteLayout>
+                        </Frame>
+                        <Button Text="    Поиск кафе/бара      " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start"  AbsoluteLayout.LayoutBounds="0, .3, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Лента мероприятий    " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, .4, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Посуточное питание   " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, .5, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Готовим с KorFood    " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, .6, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Настройки" BorderWidth="10" Clicked="ToSettingsPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds=".2, .7, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+
+
+                    </AbsoluteLayout>
+                </SwipeItemView>
+            </SwipeView.LeftItems>
+            <Grid x:Name="f" BackgroundColor="LightGray" WidthRequest="1000" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <AbsoluteLayout BackgroundColor="#a6a0d9">
+                    <Frame x:Name="Fram" Padding="0" BackgroundColor="#c9c3c3" CornerRadius="60" AbsoluteLayout.LayoutBounds=".9, .02, .8, .06" AbsoluteLayout.LayoutFlags="All">
+                        <Entry x:Name="PoiskEntry" HeightRequest="30" FontSize="18" TextColor="Black" PlaceholderColor="Black"  Placeholder="  Поиск" AbsoluteLayout.LayoutBounds=".2, 0" AbsoluteLayout.LayoutFlags="All" />
+                    </Frame>
+                    <Label x:Name="LabekCafeName" FontSize="30" Text="cafename" AbsoluteLayout.LayoutBounds=".1, .07" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <DatePicker DateSelected="dataChanged" x:Name="datapicker" AbsoluteLayout.LayoutBounds=".08, .19" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                    <Label x:Name="LabelTime" FontSize="23" Text="time" AbsoluteLayout.LayoutBounds=".5, .2" AbsoluteLayout.LayoutFlags="PositionProportional"  />
+                    <ScrollView AbsoluteLayout.LayoutBounds=".1, .5, 1, .5" AbsoluteLayout.LayoutFlags="All">
+                        <StackLayout >
+                            <AbsoluteLayout x:Name="Buttons"  />
+                            <AbsoluteLayout>
+                                <Frame AbsoluteLayout.LayoutBounds=".5, 0, .9, .5" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" BorderColor="White" CornerRadius="40" Padding="0">
+                                    <AbsoluteLayout>
+                                        <Button x:Name="ButtonMinus" Clicked="Minus" FontSize="20" Text="-" BackgroundColor="#a6a0d9" CornerRadius="60" BorderColor="White" BorderWidth="2" AbsoluteLayout.LayoutBounds="0, 0, .2, 1" AbsoluteLayout.LayoutFlags="All" />
+                                        <Button x:Name="ButtonPlus" Clicked="Plus" FontSize="20" Text="+" BackgroundColor="#a6a0d9" CornerRadius="60" BorderColor="White" BorderWidth="2" AbsoluteLayout.LayoutBounds="1, 0, .2, 1" AbsoluteLayout.LayoutFlags="All" />
+                                        <Label Text="Количество гостей: " AbsoluteLayout.LayoutBounds=".5, .5" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                                        <Label x:Name="numberOfGuests" Text="1" AbsoluteLayout.LayoutBounds=".73, .5" AbsoluteLayout.LayoutFlags="PositionProportional" />
+                                    </AbsoluteLayout>
+                                </Frame>
+                            </AbsoluteLayout>
+                            <AbsoluteLayout HeightRequest="170">
+                                <Frame AbsoluteLayout.LayoutBounds=".5, 0, .9, 1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Transparent" BorderColor="White" CornerRadius="40">
+                                    <Editor x:Name="EntryComment" Placeholder="введите свои пожелания (столик на террасе или около окна и др..)"  AbsoluteLayout.LayoutBounds="0, 0, 0, 0" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                                </Frame>
+                            </AbsoluteLayout>
+
+                        </StackLayout>
+                    </ScrollView>
+                   
+                    <Button Text="забронировать" CornerRadius="60" Clicked="SaveB" AbsoluteLayout.LayoutBounds=".5, .95, .8, .1" AbsoluteLayout.LayoutFlags="All"/>
+                </AbsoluteLayout>
+            </Grid>
+        </SwipeView>
+    </StackLayout>
+</ContentPage>

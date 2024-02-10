@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Pageitem">
+    <StackLayout Orientation="Horizontal">
+        <SwipeView >
+            <SwipeView.LeftItems >
+                <SwipeItemView WidthRequest="180">
+                    <AbsoluteLayout BackgroundColor="White" >
+                        <Frame BackgroundColor ="#a6a0d9" AbsoluteLayout.LayoutBounds="0, 0, 1, .26" AbsoluteLayout.LayoutFlags="All" Padding="0">
+                            <AbsoluteLayout>
+                                <Frame BackgroundColor="Gray" CornerRadius="60"  Padding="0" Margin="0" AbsoluteLayout.LayoutBounds="10, 15, 100, 100">
+
+                                </Frame>
+                                <Label x:Name="NameUser" Text="" TextColor="Black" FontAttributes="Bold" FontSize="16" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="10, 130, .9, .5" AbsoluteLayout.LayoutFlags="SizeProportional"/>
+                            </AbsoluteLayout>
+                        </Frame>
+                        <Button Text="    Поиск кафе/бара      " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start"  AbsoluteLayout.LayoutBounds="0, .3, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Лента мероприятий    " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, .4, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Посуточное питание   " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, .5, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Готовим с KorFood    " BorderWidth="10" Clicked="ToSearchPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds="0, .6, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+                        <Button Text="    Настройки" BorderWidth="10" Clicked="ToSettingsPage" TextColor="Black" FontAttributes="Bold" FontSize="12" BackgroundColor="White" HorizontalOptions="Start" AbsoluteLayout.LayoutBounds=".2, .7, 1, .1" Padding="0" AbsoluteLayout.LayoutFlags="All"/>
+
+
+                    </AbsoluteLayout>
+                </SwipeItemView>
+            </SwipeView.LeftItems>
+            <AbsoluteLayout BackgroundColor="#a6a0d9" WidthRequest="500">
+                <Grid Padding="20" RowSpacing="5" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Frame Padding="0" Grid.Column="0" Grid.Row="0" HeightRequest="250"  BackgroundColor="Gray" CornerRadius="40">
+                        <Image x:Name="ItemPhoto" Aspect="Fill" />
+                    </Frame>
+
+                    <Label Text="" Grid.Column="0" Grid.Row="1" x:Name="TitleLabel" FontSize="25" Padding="0,0,0, 15"/>
+                    <Label Text="" Grid.Column="0" Grid.Row="2" x:Name="DescLabel" FontSize="18" Padding="0"/>
+                </Grid>
+                <Button x:Name="DeletButton" Text="удалить запись" Clicked="delete" AbsoluteLayout.LayoutBounds=".1, 1, .5, .1" AbsoluteLayout.LayoutFlags="All"/>
+                <Button x:Name="BButton" BackgroundColor="Black" Text="заказать столик" Clicked="ToOrderPage" CornerRadius="60" AbsoluteLayout.LayoutBounds=".85, .93, .5, .07" AbsoluteLayout.LayoutFlags="All" />
+            </AbsoluteLayout>
+        </SwipeView>
+    </StackLayout>
+</ContentPage>

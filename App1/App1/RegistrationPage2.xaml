@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.RegistrationPage2" BackgroundColor="#feaea5">
+
+
+    <AbsoluteLayout>
+
+        <BoxView Color="White" AbsoluteLayout.LayoutBounds="0, 0, .3, 0.07" AbsoluteLayout.LayoutFlags="All"/>
+        <BoxView Color="#a376af" AbsoluteLayout.LayoutBounds="0, 0, 1, .13" AbsoluteLayout.LayoutFlags="All" CornerRadius="120" />
+        <BoxView Color="White" AbsoluteLayout.LayoutBounds="0, 2, 2, .8" AbsoluteLayout.LayoutFlags="All" CornerRadius="100"/>
+
+        <Label x:Name="RKorFood" Text="Регистрация в KorFood" AbsoluteLayout.LayoutBounds=".5, .05" AbsoluteLayout.LayoutFlags="PositionProportional" FontSize =" 32" FontAttributes="Bold" TextColor="White"/>
+
+        <Button x:Name="ButtonNext" Text="далее" Clicked="ToMainPage" TextColor="White" BackgroundColor = "#211b5e" AbsoluteLayout.LayoutBounds=".85, .85, 0.4, .06" AbsoluteLayout.LayoutFlags="All" CornerRadius="100"/>
+
+      
+
+        <Label x:Name="Sex" TextColor="Black" Text="Укажите пол" FontSize="18" AbsoluteLayout.LayoutBounds=".1, .48" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <Label x:Name="Age" TextColor="Black" Text="Ваш возраст " FontSize="17" AbsoluteLayout.LayoutBounds=".1, .55" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <Label x:Name="Age1" TextColor="Black" Text="" FontSize="17" AbsoluteLayout.LayoutBounds=".43, .55" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+        <Slider x:Name="slider"  Maximum="110"  Value="17" ValueChanged="slider_ValueChanged"  MinimumTrackColor="DeepPink" MaximumTrackColor="Gray" ThumbColor="DeepPink" AbsoluteLayout.LayoutBounds=".18, .6, .625, .1" AbsoluteLayout.LayoutFlags="All"/>
+        
+        <Picker x:Name="picker" TextColor="Gray" Title="выберите пол " FontSize="14" TitleColor="Black"  HeightRequest="20"  SelectedIndexChanged="picker_SelectedIndexChanged" AbsoluteLayout.LayoutBounds=".9, .48, .3, .08" AbsoluteLayout.LayoutFlags="All">
+            <Picker.Items>
+                <x:String>Мужской</x:String>
+                <x:String>женский</x:String>
+                <x:String>не хочу говорить</x:String>
+                <x:String>я плитка на потолке</x:String>
+            </Picker.Items>
+        </Picker>
+        <Picker x:Name="QuestionPicker" TextColor="Gray" Title="выберите вопрос для слова-ключа" FontSize="14" TitleColor="Black"  HeightRequest="20" AbsoluteLayout.LayoutBounds=".2, .67, .7, .07" AbsoluteLayout.LayoutFlags="All">
+            <Picker.Items>
+                <x:String>год окончания школы</x:String>
+                <x:String>любимое блюдо</x:String>
+                <x:String>любимый цвет</x:String>
+                <x:String>любимый фильм</x:String>
+                <x:String>любимый спорт</x:String>
+                <x:String>3 люимых числа</x:String>
+                <x:String>первый автомобиль</x:String>
+                <x:String>другой вопрос</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label x:Name="ErrorLabel" Text="" FontSize =" 15"  TextColor="Red" AbsoluteLayout.LayoutBounds=".1, .95" AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+        <Entry x:Name="AnswerField" Placeholder="введите ответ на ваш вопрос"  PlaceholderColor="Black" TextColor="Black" FontSize="17" AbsoluteLayout.LayoutBounds=".2, .75, .7, .07" AbsoluteLayout.LayoutFlags="All"/>
+    </AbsoluteLayout>
+</ContentPage>
